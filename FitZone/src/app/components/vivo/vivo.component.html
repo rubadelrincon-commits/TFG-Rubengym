@@ -1,0 +1,79 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
+  <div class="body">
+    <header>
+      <div class="menu-icon" (click)="toggleMenu()">☰</div>
+      <a href="/home">
+          <img class="logo" src="assets/images/logoFZ.png" alt="">
+      </a>
+      <h1>Ruben<span style="color: #11011b; font-weight: bold;">Gym</span></h1>
+      <nav>
+          <div class="menu">
+              <span class="close-btn" (click)="toggleMenu()">&times;</span>
+              <a href="/homefor-user">Bienvenida</a>
+              <a href="/planespersonalizados">Rutinas de Ejercicio</a>
+              <a href="/prices">Precios</a>
+              <a href="/nutricion">Nutrición</a>
+              <a href="/vivo">En vivo</a>
+              <a href="/faqs">FAQS</a>
+          </div>
+      </nav>
+  </header>
+  <section class="presentacion-vivo">
+    <img src="assets/images/imagen10.png" alt="">
+    <div class="contenido-presentacion">
+      <h1>Entrena en Vivo con RubenGym</h1>
+      <p>Conéctate desde donde estés, siente la energía del grupo y entrena en tiempo real con nuestros expertos.</p>
+      <a href="/vivo" class="btn-explorar">Ver Clases en Vivo</a>
+    </div>
+  </section>
+  <section class="clases-vivo">
+    <div class="container">
+      <h2 class="titulo-seccion">Horarios:</h2>
+      <p style="color: black;" class="descripcion-seccion">Conéctate en tiempo real con nuestros entrenadores y vive la experiencia RubenGym al máximo.</p>
+
+      <!-- Filtros -->
+      <div class="filtros-vivo">
+        <button (click)="filtrarDia('lunes')">Lunes</button>
+        <button (click)="filtrarDia('martes')">Martes</button>
+        <button (click)="filtrarDia('miércoles')">Miércoles</button>
+        <button (click)="filtrarDia('jueves')">Jueves</button>
+        <button (click)="filtrarDia('viernes')">Viernes</button>
+      </div>
+
+      <!-- Clases del día -->
+      <div class="lista-clases">
+        <div class="clase-viva" *ngFor="let clase of clasesFiltradas" (click)="abrirModal(clase)">
+          <div class="hora">{{ clase.hora }}</div>
+          <div class="info">
+            <h3>{{ clase.nombre }}</h3>
+            <p>{{ clase.instructor }} • {{ clase.duracion }} min</p>
+            <span class="categoria">{{ clase.tipo }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-backdrop" *ngIf="mostrarModal" (click)="cerrarModal()">
+      <div class="modal-clase" (click)="$event.stopPropagation()">
+        <span class="cerrar" (click)="cerrarModal()">×</span>
+        <h2>{{ claseSeleccionada?.nombre }}</h2>
+        <p><strong>Instructor:</strong> {{ claseSeleccionada?.instructor }}</p>
+        <p><strong>Duración:</strong> {{ claseSeleccionada?.duracion }} min</p>
+        <p><strong>Tipo:</strong> {{ claseSeleccionada?.tipo }}</p>
+        <p><strong>Descripción:</strong> {{ claseSeleccionada?.descripcion }}</p>
+        <button class="btn-reservar" (click)="reservarClase(claseSeleccionada)">Reservar Clase</button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <p>&copy; 2025 RUBENGYM - Todos los derechos reservados.</p>
+  </footer>
+</div>
+
+

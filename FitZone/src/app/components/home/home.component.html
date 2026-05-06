@@ -1,0 +1,197 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
+  <div class="body">
+    <header>
+      <div class="menu-icon" (click)="toggleMenu()">☰</div>
+      <a href="/home"><img src="assets/images/logoFZ.png" alt=""></a>
+      <h1>Ruben<span style="color: blueviolet; font-weight: bold;">Gym</span></h1>
+      <nav>
+        <div class="menu">
+          <span class="close-btn" (click)="toggleMenu()">&times;</span>
+          <a href="/home">Home</a>
+          <a href="/planespersonalizados">Rutinas de Ejercicio</a>
+          <a href="/nutricion">Nutrición</a>
+          <a href="/vivo">En vivo</a>
+          <a href="/faqs">FAQS</a>
+        </div>
+      </nav>
+      <div class="profile-icon" (click)="irAPerfil()">
+        <i class="fas fa-user"></i>
+      </div>
+    </header>
+    <div class="hero">
+      <video autoplay muted loop id="background-video">
+        <source src="assets/videos/fondo3.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <p>Mejora tu salud, mejora tu vida.</p>
+        <button class="btn" (click)="irALogin()">Comienza Ahora</button>
+      </div>
+    </div>
+    <div class="section nutrition" id="nutricion">
+      <section class="nutricion">
+        <h2>Nutrición y Rendimiento</h2>
+        <p>La clave para potenciar tus resultados en el gimnasio. Alimentación equilibrada, consejos y planes personalizados.</p>
+        <div class="benefits">
+          <div class="benefit">
+            <h3>🍏 Alimentación Saludable</h3>
+            <p>Aprende qué comer para optimizar tu entrenamiento.</p>
+            <img src="assets/images/saludable.jpg" alt="">
+          </div>
+          <div class="benefit">
+            <h3>💪 Suplementación Inteligente</h3>
+            <p>Descubre cómo aprovechar al máximo los suplementos.</p>
+            <img src="assets/images/proteina.jpg" alt="">
+          </div>
+          <div class="benefit">
+            <h3>📋 Planes Personalizados</h3>
+            <p>Consulta con nuestros expertos y recibe un plan a medida.</p>
+            <img src="assets/images/personalizado.jpg" alt="">
+          </div>
+        </div>
+        <div class="cta">
+          <a href="/login">Descubre más</a>
+        </div>
+      </section>
+    </div>
+    <section class="rutinas" id="membresias">
+      <div class="video-container">
+        <video src="assets/videos/humo.mp4" autoplay muted loop></video>
+      </div>
+      <div class="rutinas-content">
+        <h2>Transforma tu Cuerpo con Nuestras Rutinas</h2>
+        <p>Diseñadas por expertos, nuestras rutinas de entrenamiento te ayudarán a alcanzar tus metas, ya sea perder peso, ganar músculo o mejorar tu resistencia. Con programas personalizados y asesoramiento profesional, cada entrenamiento te acerca más a tu mejor versión.</p>
+        <p>💥 Rutinas dinámicas adaptadas a todos los niveles.<br> 🏆 Planes basados en ciencia para resultados óptimos.<br> 🔥 Ejercicios funcionales y específicos para cada objetivo.</p>
+        <div class="cta">
+          <a href="/login">Empieza Hoy Mismo</a>
+        </div>
+      </div>
+    </section>
+    <section class="planes">
+      <h2>Planes de Entrenamiento Personalizados</h2>
+      <p>Encuentra el plan perfecto diseñado según tus objetivos, nivel de experiencia y estilo de vida.</p>
+
+      <div class="scroll-wrapper">
+          <div class="planes-container">
+              <div class="plan">
+                  <h3> Plan Fitness</h3>
+                  <p>Ideal para quienes buscan mantenerse en forma con entrenamientos equilibrados.</p>
+              </div>
+              <div class="plan">
+                  <h3> Plan Transformación</h3>
+                  <p>Optimizado para perder peso y tonificar el cuerpo con entrenamientos intensos.</p>
+              </div>
+              <div class="plan">
+                  <h3> Plan Fuerza</h3>
+                  <p>Enfocado en el levantamiento de pesas para aumentar masa muscular y resistencia.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="cta">
+          <a href="/login">Elige tu Plan</a>
+      </div>
+  </section>
+  <section class="about-gym" id="nosotros">
+    <div class="about-content">
+        <h2>¿Por qué elegir nuestro gimnasio?</h2>
+        <p>
+            El entrenamiento es más que solo ejercicio: es una experiencia transformadora.
+            Nos enfocamos en brindarte el mejor ambiente, equipamiento de primera y entrenadores capacitados para ayudarte a
+            alcanzar tu máximo potencial.
+        </p>
+        <p>
+            Contamos con una amplia gama de áreas especializadas, desde zonas de pesas y cardio hasta espacios para entrenamiento funcional,
+            clases grupales y deportes de combate. Sea cual sea tu nivel de experiencia, aquí encontrarás el soporte necesario para superar
+            tus límites.
+        </p>
+        <p>
+            Nuestro equipo de entrenadores certificados está siempre disponible para brindarte asesoramiento personalizado,
+            ayudarte a mejorar tu técnica y asegurarse de que cada sesión sea eficiente y segura.
+        </p>
+        <p>
+            Además, ofrecemos un ambiente motivador y una comunidad que te impulsará a mantenerte constante y motivado.
+            ¡Únete a nosotros y lleva tu entrenamiento al siguiente nivel!
+        </p>
+    </div>
+    <div class="about-image">
+        <img src="assets/images/gym5.jpg" alt="">
+    </div>
+</section>
+<section class="brand-pillars" id="pilares">
+  <h2 class="section-title">
+    <span>N</span><span>u</span><span>e</span><span>s</span><span>t</span><span>r</span><span>o</span><span>s</span>
+    <span>P</span><span>i</span><span>l</span><span>a</span><span>r</span><span>e</span><span>s</span>
+</h2>
+
+  <div class="pillar">
+      <div class="pillar-image">
+          <img src="assets/images/gym6.jpg" alt="Entrenamiento de alta intensidad">
+      </div>
+      <div class="pillar-text">
+          <h3>Determinación</h3>
+          <p>
+              La disciplina y la constancia son la clave del éxito. No se trata solo de entrenar, sino de desafiarte a ti mismo cada día
+              para alcanzar nuevas metas y superar tus propios límites.
+          </p>
+          <h3>Fuerza</h3>
+        <p>
+            La verdadera fuerza no solo está en los músculos, sino en la mente. Es el poder de resistir, de adaptarse y de levantarse
+            una y otra vez hasta alcanzar la grandeza.
+        </p>
+      </div>
+  </div>
+
+  <div class="pillar">
+      <div class="pillar-image">
+          <img src="assets/images/login4.avif" alt="Instructor motivando">
+      </div>
+      <div class="pillar-text">
+          <h3>Actitud</h3>
+          <p>
+              La actitud lo es todo. La energía, el compromiso y la pasión que traes a cada entrenamiento definen tu progreso.
+              En nuestro gimnasio, entrenamos con mentalidad ganadora.
+          </p>
+          <h3>Resultados</h3>
+        <p>
+            Aquí no se trata solo de entrenar, sino de transformar. Cada gota de sudor, cada repetición y cada esfuerzo se reflejan
+            en los resultados. En nuestro gimnasio, trabajamos para que cada miembro alcance su mejor versión.
+        </p>
+      </div>
+  </div>
+</section>
+    <section class="contacto" id="contacto">
+      <div class="overlay"></div>
+      <div class="contact-container">
+          <h2>Contacta con Nosotros</h2>
+          <p>¿Listo para transformar tu vida? Comienza tu viaje fitness hoy mismo.</p>
+          <div class="contact-form">
+              <form>
+                  <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                  <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                  <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+                  <button type="submit">Enviar Mensaje</button>
+              </form>
+          </div>
+      </div>
+  </section>
+    <footer class="footer">
+      <p>&copy; 2025 RUBENGYM - Todos los derechos reservados.</p>
+
+      <!-- Panel de Administración Mejorado -->
+      <div *ngIf="isAdmin" class="admin-section">
+        <div class="admin-content">
+          <h3>Panel de Administración</h3>
+          <p>Bienvenido al área de gestión administrativa</p>
+          <div class="admin-buttons">
+            <a [routerLink]="['/admin']" class="admin-btn">
+              <i class="fas fa-users-cog"></i>
+              Gestionar Usuarios
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>

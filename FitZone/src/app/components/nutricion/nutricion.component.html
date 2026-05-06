@@ -1,0 +1,190 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
+<div class="body">
+  <header>
+    <div class="menu-icon" (click)="toggleMenu()">☰</div>
+    <a href="/home">
+        <img class="logo" src="assets/images/logoFZ.png" alt="">
+    </a>
+    <h1>Ruben<span style="color: #11011b; font-weight: bold;">Gym</span></h1>
+    <nav>
+        <div class="menu">
+            <span class="close-btn" (click)="toggleMenu()">&times;</span>
+            <a href="/homefor-user">Bienvenida</a>
+              <a href="/planespersonalizados">Rutinas de Ejercicio</a>
+              <a href="/prices">Precios</a>
+              <a href="/nutricion">Nutrición</a>
+              <a href="/vivo">En vivo</a>
+              <a href="/faqs">FAQS</a>
+        </div>
+    </nav>
+</header>
+<section class="intro-nutricion">
+  <div class="intro-nutricion-content">
+    <img src="assets/images/fondoNutricion.png" alt="">
+    <h1>🍽️ La Clave del Bienestar: La Nutrición</h1>
+    <p>
+      La nutrición no es solo una parte más del fitness, es el corazón de un estilo de vida saludable. <br>
+      Una alimentación equilibrada potencia tu energía, acelera tus resultados y mejora tu bienestar general.
+      Aprende a alimentar tu cuerpo con inteligencia y propósito.
+    </p>
+  </div>
+</section>
+<section class="nutricion-deporte">
+  <div class="nutricion-deporte-wrapper">
+
+    <h2 style="font-size: 50px;" class="title-typewriter">Nutrición y Movimiento: El Dúo Imparable</h2>
+
+    <p class="text-fade-bounce">
+      Alimenta tu cuerpo con lo mejor y ponlo en acción. <strong>Comer bien y moverse</strong> van de la mano para lograr resultados reales.
+      Ya sea corriendo, bailando, levantando pesas o haciendo yoga, la energía que consumes define tu rendimiento.
+    </p>
+
+    <div class="anim-icons">
+      <span class="bounce">🏃‍♂️</span>
+      <span class="bounce delay-1">💪</span>
+      <span class="bounce delay-2">🍎</span>
+      <span class="bounce delay-3">🧘‍♀️</span>
+      <span class="pulse">🥗</span>
+      <span class="float">🚴‍♀️</span>
+    </div>
+
+<button class="cta-btn" (click)="mostrarMotivacion($event)">¡Motívame! 💥</button>
+
+<!-- Aquí se mostrará el mensaje motivacional -->
+<div class="motivacion-mensaje" id="motivacionMensaje">{{ mensajeMotivacional }}</div>
+
+  </div>
+</section>
+
+<section class="errores-nutricion">
+  <div class="errores-nutricion-content">
+    <img class="pesas" src="assets/images/pesas.png" alt="">
+    <h1><span class="alert-icon">⚠️</span> Errores Comunes en la Nutrición</h1>
+    <ul id="lista-errores">
+      <li class="error-item">❌ Saltarse comidas pensando que ayuda a perder peso.</li>
+      <li class="error-item">❌ Consumir pocas proteínas, especialmente en entrenamientos intensos.</li>
+      <li class="error-item">❌ Depender de dietas milagrosas o restrictivas.</li>
+      <li class="error-item">❌ No hidratarse lo suficiente durante el día.</li>
+      <li class="error-item">❌ Comer por ansiedad o aburrimiento, no por hambre real.</li>
+    </ul>
+    <p style="margin-top: 1rem;margin-left: 70px;">✅ Conócete, infórmate y toma decisiones que nutran tu salud y objetivos.</p>
+  </div>
+</section>
+
+<section class="nutricion">
+    <div id="particles-background"></div>
+    <div class="contenido">
+      <h1>🧠 Nutrición Inteligente</h1>
+      <p>Calcula tus necesidades diarias y recibe tips personalizados</p>
+
+      <div class="calculadora">
+        <h2>Calculadora de Calorías</h2>
+        <form (submit)="calcularCalorias($event)">
+          <div class="input-group">
+            <label>Edad</label>
+            <input type="number" id="edad" required>
+          </div>
+          <div class="input-group">
+            <label>Género</label>
+            <select id="genero">
+              <option value="hombre">Hombre</option>
+              <option value="mujer">Mujer</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Peso (kg)</label>
+            <input type="number" id="peso" required>
+          </div>
+          <div class="input-group">
+            <label>Altura (cm)</label>
+            <input type="number" id="altura" required>
+          </div>
+          <div class="input-group">
+            <label>Actividad</label>
+            <select id="actividad">
+              <option value="1.2">Sedentario</option>
+              <option value="1.375">Ligera</option>
+              <option value="1.55">Moderada</option>
+              <option value="1.725">Intensa</option>
+              <option value="1.9">Muy intensa</option>
+            </select>
+          </div>
+          <button type="submit">Calcular</button>
+        </form>
+        <div class="resultado">{{ resultado }}</div>
+      </div>
+
+      <div class="tips-container">
+        <h3>🥗 Tip Nutricional</h3>
+        <p id="tip-text">Cargando...</p>
+      </div>
+    </div>
+  </section>
+  <div class="macros" id="macros" style="display:none;">
+  <h3>Distribución de Macronutrientes</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Macronutrientes</th>
+        <th>Calorías</th>
+        <th>Gramos aprox.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PROTEINAS</td>
+        <td id="cal-proteinas"></td>
+        <td id="gr-proteinas"></td>
+      </tr>
+      <tr>
+        <td>GRASAS</td>
+        <td id="cal-grasas"></td>
+        <td id="gr-grasas"></td>
+      </tr>
+      <tr>
+        <td>CARBOHIDRATOS</td>
+        <td id="cal-carbs"></td>
+        <td id="gr-carbs"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="rutina-semanal" *ngIf="rutinaSemanal.length > 0">
+  <button (click)="exportarPDF()" class="btn-descargar">📥 Descargar PDF</button>
+  <!-- ELEMENTOS ANIMADOS INTERNOS -->
+<div class="animacion-rutina">
+  <svg class="onda-central" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="50" />
+  </svg>
+
+  <!-- Objetos flotantes de gym -->
+  <span class="obj-gym obj1"><img src="assets/images/gym10.jpg" alt=""></span>
+  <span class="obj-gym obj2"><img src="assets/images/gym9.jpg" alt=""></span>
+  <span class="obj-gym obj3"><img src="assets/images/gym8.jpg" alt=""></span>
+  <span class="obj-gym obj5"><img src="assets/images/gym7.jpg" alt=""></span>
+
+</div>
+
+  <div #pdfContent>
+    <h2>Rutina semanal personalizada 🗓️</h2>
+    <div class="dia-semana" *ngFor="let dia of rutinaSemanal">
+
+      <h3>{{ dia.dia }}</h3>
+      <p><strong>Ejercicio:</strong> {{ dia.ejercicio }}</p>
+      <p><strong>Desayuno:</strong> {{ dia.comida.desayuno }}</p>
+      <p><strong>Almuerzo:</strong> {{ dia.comida.almuerzo }}</p>
+      <p><strong>Cena:</strong> {{ dia.comida.cena }}</p>
+      <p><strong>Calorías estimadas:</strong> {{ dia.comida.calorias }} kcal</p>
+      <hr />
+    </div>
+  </div>
+</div>
+
+  <footer class="footer">
+    <p>&copy; 2025 RUBENGYM - Todos los derechos reservados.</p>
+  </footer>
+</div>
+

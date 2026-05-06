@@ -1,0 +1,86 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="body">
+  <header>
+    <div class="menu-icon" (click)="toggleMenu()">☰</div>
+    <a href="/home">
+      <img class="logo" src="assets/images/logoFZ.png" alt="">
+    </a>
+    <h1>Ruben<span style="color: #11011b; font-weight: bold;">Gym</span></h1>
+    <nav>
+      <div class="menu">
+        <span class="close-btn" (click)="toggleMenu()">&times;</span>
+        <a href="/homefor-user">Bienvenida</a>
+              <a href="/planespersonalizados">Rutinas de Ejercicio</a>
+              <a href="/prices">Precios</a>
+              <a href="/nutricion">Nutrición</a>
+              <a href="/vivo">En vivo</a>
+              <a href="/faqs">FAQS</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección de FAQs -->
+  <div class="faq-container">
+    <h1>Preguntas Frecuentes - RubenGym</h1>
+
+    <div class="faq-item" *ngFor="let pregunta of [
+      { q: '¿Qué es un gimnasio virtual?', a: 'Un gimnasio virtual es una plataforma en línea donde puedes acceder a clases de fitness, entrenamientos personalizados y asesoría profesional desde la comodidad de tu hogar.' },
+      { q: '¿Necesito tener experiencia previa para unirme?', a: 'No es necesario tener experiencia previa. Tenemos programas para todos los niveles, desde principiantes hasta avanzados, y nuestros entrenadores se adaptan a tus necesidades.' },
+      { q: '¿Cuáles son los requisitos técnicos para acceder a las clases?', a: 'Solo necesitas una conexión a internet estable, un dispositivo como tu ordenador, móvil o tablet, y si es posible, un espacio adecuado para hacer los ejercicios cómodamente.' },
+      { q: '¿Puedo entrenar en cualquier momento?', a: 'Sí, todas nuestras clases y programas están disponibles las 24 horas del día. Solo necesitas acceder a tu cuenta y elegir el entrenamiento que mejor se adapte a tu horario.' },
+      { q: '¿Qué tipos de clases ofrece el gimnasio virtual?', a: 'Ofrecemos clases de cardio, fuerza, yoga, pilates, HIIT, entre otros. Además, tenemos entrenamientos específicos para diferentes objetivos como pérdida de peso, tonificación y resistencia.' },
+      { q: '¿Cómo puedo contactar con los entrenadores?', a: 'Puedes contactarlos directamente a través de la plataforma o agendar sesiones de entrenamiento personalizadas según tus necesidades. Los entrenadores también ofrecen asesoramiento en nuestras clases en vivo.' }
+    ]">
+      <button class="faq-question" (click)="toggleAnswer($event)">{{ pregunta.q }}</button>
+      <div class="faq-answer">
+        <p>{{ pregunta.a }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Catálogo de Clases -->
+  <section class="catalogo-clases" id="catalogo">
+    <div class="container">
+      <h2 class="section-title">Entrenamientos frecuentes</h2>
+      <p class="section-subtitle">Elige entre una gran variedad de clases, disponibles 24/7</p>
+
+      <div class="filtros">
+        <button (click)="filtrarClases('todos')" [class.activo]="filtroActivo === 'todos'">Todos</button>
+        <button (click)="filtrarClases('Cardio')" [class.activo]="filtroActivo === 'Cardio'">Cardio</button>
+        <button (click)="filtrarClases('Fuerza')" [class.activo]="filtroActivo === 'Fuerza'">Fuerza</button>
+        <button (click)="filtrarClases('Relajación')" [class.activo]="filtroActivo === 'Relajación'">Relajación</button>
+        <button (click)="filtrarClases('Diversión')" [class.activo]="filtroActivo === 'Diversión'">Diversión</button>
+      </div>
+
+      <div class="clases-grid">
+        <div class="clase-card" *ngFor="let clase of clasesFiltradas" (click)="verDetalle(clase)">
+          <img [src]="clase.imagen" [alt]="clase.nombre">
+          <div class="clase-info">
+            <h3>{{ clase.nombre }}</h3>
+            <span class="etiqueta">{{ clase.categoria }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Modal de Detalle de Clase -->
+<div class="modal-backdrop" *ngIf="mostrarModal" (click)="cerrarModal()">
+  <div class="modal-contenido" (click)="$event.stopPropagation()">
+    <h2>{{ claseSeleccionada?.nombre }}</h2>
+    <p>{{ claseSeleccionada?.descripcion }}</p>
+  </div>
+</div>
+<section class="cierre">
+  <div class="container">
+    <h2 class="frase-final">Tu cuerpo no entiende de excusas, ¡entrena donde quieras y cuando quieras!</h2>
+    <p class="subfrase">En RubenGym, llevamos el gimnasio a tu hogar para que alcances tus metas sin límites.</p>
+  </div>
+</section>
+  <footer class="footer">
+    <p>&copy; 2025 RUBENGYM - Todos los derechos reservados.</p>
+  </footer>
+</div>

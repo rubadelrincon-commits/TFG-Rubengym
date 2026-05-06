@@ -1,0 +1,252 @@
+.body {
+  margin: 0;
+   font-family: "Oswald", sans-serif;
+  background-color: #000000;
+  color: white;
+  height: 100%;
+}
+
+header {
+    background: linear-gradient(210deg, #11011b, #611fa2);
+    padding: 20px 30px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 70px;
+    width: 100px;
+}
+
+@keyframes moveSide {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(15px); }
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 3em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 34, 34, 0.9);
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu a {
+  font-size: 3em;
+  color: white;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+.menu a:hover {
+  background-color: #575757;
+}
+
+.menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3em;
+  cursor: pointer;
+  color: white;
+}
+
+.footer {
+  background: #111;
+  padding: 30px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background: rgba(34, 34, 34, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.open-popup-btn {
+  background-color: #6a0dad;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #333;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-btn {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup .menu a {
+  display: block;
+  color: white;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.popup .menu a:hover {
+  background-color: #575757;
+}
+
+header img {
+  width: 80px;
+  z-index: 2;
+}
+.planes-entrenamiento {
+  padding: 4rem 2rem;
+  color: #ffffff;
+}
+
+.titulo-principal {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 80px;
+}
+
+.descripcion-general {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.plan {
+  background: linear-gradient(135deg, #4c0570, #000000);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+}
+
+.plan h3 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.plan p {
+  margin: 0.5rem 0;
+  color: white;
+  font-size: 26px;
+}
+
+.plan ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  color: white;
+}
+
+.plan ul li {
+  margin: 0.4rem 0;
+  line-height: 1.5;
+}

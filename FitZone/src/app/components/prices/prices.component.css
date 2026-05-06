@@ -1,0 +1,344 @@
+.body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+}
+header {
+  background: linear-gradient(210deg, #11011b, #611fa2);
+  padding: 30px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+header img {
+  width: 80px;
+  height: auto
+}
+.menu-icon {
+  display: block;
+  font-size: 3em; /* Aumentar el tamaño de las tres rayas */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%); /* Centrar verticalmente */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.9);
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu a {
+  font-size: 3em;
+  color: white;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+.menu a:hover {
+  background-color: #575757;
+}
+
+.menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3em;
+  cursor: pointer;
+  color: white;
+}
+.pricing{
+  padding: 80px 0;
+  text-align: center;
+  height: 920px;
+  margin-top: 100px;
+}
+.pricing h1 {
+  margin-bottom: 20px;
+  font-size: 70px;
+}
+.toggle-container {
+  margin-bottom: 20px;
+
+}
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: solid 2px #ffffff;
+  background:linear-gradient(210deg, #11011b, #611fa2);
+  color: white;
+}
+.toggle-button:hover {
+  background: #6a0dad;
+}
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Animaciones de brillo */
+@keyframes borderGlowBronze {
+  0% { box-shadow: 0 0 5px #cd7f32; }
+  50% { box-shadow: 0 0 20px #cd7f32; }
+  100% { box-shadow: 0 0 5px #cd7f32; }
+}
+
+@keyframes borderGlowSilver {
+  0% { box-shadow: 0 0 5px #c0c0c0; }
+  50% { box-shadow: 0 0 20px #c0c0c0; }
+  100% { box-shadow: 0 0 5px #c0c0c0; }
+}
+
+@keyframes borderGlowGold {
+  0% { box-shadow: 0 0 5px gold; }
+  50% { box-shadow: 0 0 20px gold; }
+  100% { box-shadow: 0 0 5px gold; }
+}
+.coming-soon {
+  position: absolute;
+  top: 200px;
+  left: -40px;
+  transform: rotate(-45deg);
+  background-color: rgba(138, 43, 226, 0.8);
+  color: white;
+  font-weight: bold;
+  padding: 5px 120px;
+  font-size: 54px;
+  animation: blink 4s infinite;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.plan {
+  position: relative;
+}
+
+
+/* Estilos de los planes */
+.plan {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 500px;
+  height: 600px;
+  transition: transform 0.3s;
+  display: none;
+}
+.plan.active {
+  display: block;
+}
+.plan.bronze {
+  border: 3px solid #cd7f32;
+  animation: borderGlowBronze 1.5s infinite alternate;
+}
+.plan.silver {
+  border: 3px solid #c0c0c0;
+  animation: borderGlowSilver 1.5s infinite alternate;
+}
+.plan.gold {
+  border: 3px solid gold;
+  animation: borderGlowGold 1.5s infinite alternate;
+}
+.plan h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.price {
+  font-size: 54px;
+  font-weight: bold;
+  margin: 10px 0;
+  margin-bottom: 50px;
+}
+.features {
+  list-style: none;
+  padding: 0;
+}
+.features li {
+  margin: 10px 0;
+  font-size: 24px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: linear-gradient(210deg, #11011b, #611fa2);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  pointer-events: none;
+}
+.button-free{
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: linear-gradient(210deg, #11011b, #611fa2);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.button:hover {
+  background: #6a0dad;
+}
+.premium {
+  border: 2px solid gold;
+}
+.virtual-coach {
+  background: linear-gradient(210deg, #11011b, #611fa2);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.coach-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.coach-avatar {
+  width: 120px;
+  height: 120px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/4712/4712010.png');
+  background-size: cover;
+  animation: pulse 1.5s infinite;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.testimonios-css {
+  text-align: center;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: #111;
+}
+.testimonios-css h2 {
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.slider-css {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  width: 900%;
+  animation: slideAnimation 40s linear infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: white;
+  transition: opacity 0.9s ease-in-out;
+  opacity: 0.85;
+}
+
+.slide:nth-child(1) { background: #000000; }
+.slide:nth-child(2) { background: linear-gradient(210deg, #11011b, #611fa2); }
+.slide:nth-child(3) { background: #000000; }
+.slide:nth-child(4) { background: linear-gradient(210deg, #11011b, #611fa2); }
+.slide:nth-child(5) { background: #000000; }
+.slide:nth-child(6) { background: linear-gradient(210deg, #11011b, #611fa2); }
+.slide:nth-child(7) { background: #000000; }
+.slide:nth-child(8) { background: linear-gradient(210deg, #11011b, #611fa2);}
+
+@keyframes slideAnimation {
+  0%   { transform: translateX(0%); }
+  12.5%  { transform: translateX(0%); }
+  15%  { transform: translateX(-100%); }
+  27.5% { transform: translateX(-100%); }
+  30%  { transform: translateX(-200%); }
+  42.5% { transform: translateX(-200%); }
+  45%  { transform: translateX(-300%); }
+  57.5% { transform: translateX(-300%); }
+  60%  { transform: translateX(-400%); }
+  72.5% { transform: translateX(-400%); }
+  75%  { transform: translateX(-500%); }
+  87.5% { transform: translateX(-500%); }
+  90%  { transform: translateX(-600%); }
+  97.5% { transform: translateX(-600%); }
+  100% { transform: translateX(-700%); }
+}
+
+
+
+.footer {
+  background: #111;
+  padding: 30px;
+  text-align: center;
+}

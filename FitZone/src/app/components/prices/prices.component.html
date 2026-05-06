@@ -1,0 +1,130 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
+  rel="stylesheet"
+/>
+<div class="body">
+  <header>
+    <div class="menu-icon" (click)="toggleMenu()">☰</div>
+    <a href="/home"><img src="assets/images/logoFZ.png" alt=""></a>
+    <h1>Ruben<span style="color: blueviolet; font-weight: bold;">Gym</span></h1>
+    <nav>
+      <div class="menu">
+        <span class="close-btn" (click)="toggleMenu()">&times;</span>
+        <a href="/homefor-user">Bienvenida</a>
+              <a href="/planespersonalizados">Rutinas de Ejercicio</a>
+              <a href="/prices">Precios</a>
+              <a href="/nutricion">Nutrición</a>
+              <a href="/vivo">En vivo</a>
+              <a href="/faqs">FAQS</a>
+      </div>
+    </nav>
+  </header>
+  <div class="pricing">
+    <h1>Planes de Membresía</h1>
+    <div class="toggle-container">
+      <button class="toggle-button" (click)="togglePricing('permanencia')">Con Permanencia</button>
+      <button class="toggle-button" (click)="togglePricing('sin-permanencia')">Sin Permanencia</button>
+    </div>
+    <div class="pricing-container">
+      <div class="plan permanencia active bronze">
+        <h2>🏋️ Gratis (Virtual)</h2>
+        <p class="price">$0/mes</p>
+        <ul class="features">
+          <li>✅ 2 clases online/semana</li>
+          <li>✅ Acceso a comunidad virtual</li>
+          <li>✅ Guías PDF de entrenamiento</li>
+          <li>🚫 Sin asesoramiento personalizado</li>
+          <li>🚫 Sin seguimiento de progreso</li>
+        </ul>
+        <a href="/login" class="button-free">Empieza Gratis</a>
+      </div>
+
+      <div class="plan permanencia silver">
+        <div class="coming-soon">Próximamente</div>
+        <h2>🔥 Estándar (Virtual)</h2>
+        <p class="price">$19.99/mes</p>
+        <ul class="features">
+          <li>✅ Acceso ilimitado a clases online</li>
+          <li>✅ App con rutinas interactivas</li>
+          <li>✅ Comunidad y retos mensuales</li>
+          <li>✅ Guías de nutrición</li>
+          <li>🚫 Sin entrenador personalizado</li>
+        </ul>
+        <a href="" class="button">Únete Ahora</a>
+      </div>
+
+      <div class="plan permanencia premium gold">
+        <div class="coming-soon">Próximamente</div>
+        <h2>💎 Premium (Virtual)</h2>
+        <p class="price">$39.99/mes</p>
+        <ul class="features">
+          <li>✅ Todo en Estándar +</li>
+          <li>✅ Entrenador personal virtual</li>
+          <li>✅ Plan nutricional personalizado</li>
+          <li>✅ Análisis de progreso mensual</li>
+          <li>✅ Acceso prioritario a eventos en vivo</li>
+        </ul>
+        <a href="" class="button">Empieza tu Transformación</a>
+      </div>
+
+      <div class="plan sin-permanencia silver">
+        <div class="coming-soon">Próximamente</div>
+        <h2>🔥 Estándar (Virtual Sin Permanencia)</h2>
+        <p class="price">$24.99/mes</p>
+        <ul class="features">
+          <li>✅ Acceso ilimitado a clases online</li>
+          <li>✅ App con rutinas interactivas</li>
+          <li>✅ Comunidad y retos mensuales</li>
+          <li>✅ Guías de nutrición</li>
+          <li>🚫 Sin entrenador personalizado</li>
+        </ul>
+        <a href="" class="button">Únete Ahora</a>
+      </div>
+
+      <div class="plan sin-permanencia premium gold">
+        <div class="coming-soon">Próximamente</div>
+        <h2>💎 Premium (Virtual Sin Permanencia)</h2>
+        <p class="price">$44.99/mes</p>
+        <ul class="features">
+          <li>✅ Todo en Estándar +</li>
+          <li>✅ Entrenador personal virtual</li>
+          <li>✅ Plan nutricional personalizado</li>
+          <li>✅ Análisis de progreso mensual</li>
+          <li>✅ Acceso prioritario a eventos en vivo</li>
+        </ul>
+        <a href="" class="button">Empieza tu Transformación</a>
+      </div>
+    </div>
+    <section class="virtual-coach">
+      <div class="coach-content">
+        <div class="coach-avatar"></div>
+        <div>
+          <h2>Tu Entrenador Virtual Te Espera</h2>
+          <p>Interactúa con tu entrenador digital 24/7. Hazle preguntas, sigue tus rutinas personalizadas y mantente motivado con mensajes diarios.</p>
+          <a href="/login" class="button">Probar Gratis</a>
+        </div>
+      </div>
+    </section>
+    <section class="testimonios-css">
+      <h2>🌟 Historias de Transformación</h2>
+      <div class="slider-css">
+        <div class="slides">
+          <div class="slide">"Gracias al gym virtual, bajé 10kg en 3 meses sin salir de casa "<br><strong>- Alex M.</strong></div>
+          <div class="slide">"Las clases en vivo me mantienen motivada todos los días "<br><strong>- Laura G.</strong></div>
+          <div class="slide">"El entrenador virtual es como tener a alguien siempre a tu lado!"<br><strong>- Carlos T.</strong></div>
+          <div class="slide">"El plan nutricional personalizado me cambió la vida "<br><strong>- Ana S.</strong></div>
+          <div class="slide">"Retos mensuales = motivación al 100% "<br><strong>- Pedro R.</strong></div>
+          <div class="slide">"Me encanta poder entrenar desde cualquier parte del mundo "<br><strong>- Sofía L.</strong></div>
+          <div class="slide">"¡La comunidad es brutal! Me siento parte de algo grande "<br><strong>- Javi K.</strong></div>
+          <div class="slide">"Mi cuerpo y mi mente han mejorado muchísimo "<br><strong>- Clara B.</strong></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  <footer class="footer">
+    <p>&copy; 2025 RUBENGYM - Todos los derechos reservados.</p>
+  </footer>
+</div>
